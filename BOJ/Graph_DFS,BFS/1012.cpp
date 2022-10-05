@@ -63,7 +63,7 @@ void bfs(){
         for(int k=0;k<4;k++){
             int nx=x+dx[k];
             int ny=y+dy[k];
-            if(0<=nx && nx<m && 0<=ny && ny<n){
+            if(0<=nx && nx<m && 0<=ny && ny<n){ 
                 if(visited[nx][ny]==0 && field[nx][ny]!=0){
                     q.push(make_pair(nx,ny));
                     visited[nx][ny]=1;
