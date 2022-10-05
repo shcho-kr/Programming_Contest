@@ -108,5 +108,9 @@ int main() {
     cout<<"bfs Start"<<endl;
     g.bfs();
 
+    pair<int,int> p=make_pair(1,2);
+    cout<<"first element : "<<p.first<<endl;
+    cout<<"second element : "<<p.second<<endl;
+
 	return 0;
 }
