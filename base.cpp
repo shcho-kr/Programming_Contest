@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
+#include <queue>
 
 #define ll long long
 
@@ -14,9 +15,16 @@ int main() {
 	
     cout<<"Hello world!"<<endl;
 
-    int list[10]={0,1,2,3,4,5,6,7,8,9};
+    int list[5]={1,2,3,4,5};
+    cout<<"Max value : "<<*max_element(list,list+5)<<endl;
 
-    cout<<*max_element(list,list+10)<<endl;
+    for(int idx: list){ // copy value
+        cout<<"List for with call-by-value : "<<idx<<endl;
+    }
+
+    for(int &idx: list){ // copy address and value
+        cout<<"List for with call-by-reference : "<<idx<<endl;
+    }
 
 	return 0;
 }
