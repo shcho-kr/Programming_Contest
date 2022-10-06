@@ -55,20 +55,21 @@ class Graph{
         return components;
     }
 
-    void bfs(){
+    void bfs(int n){
         fill(visited.begin(), visited.end(), false);
         queue<int> Q;
-        Q.push(0);
-        visited[0]=true;
+        Q.push(n);
+        visited[n]=true;
 
         int level = 0;
         while(!Q.empty()){
             int qSize = Q.size();
-            cout<<"level : " << level << endl;
+            //cout<<"level : " << level << endl;
             for(int i=0;i<qSize;i++){
             int curr = Q.front();
             Q.pop();
-            cout<<"node : " << curr << " visited" << endl;
+            //cout<<"node : " << curr << " visited" << endl;
+            cout << curr+1 << ' ';
             for(int next: adj[curr]){
                 if(!visited[next]){
                     visited[next] = true;
@@ -80,11 +81,12 @@ class Graph{
         }
     }
 
-    private:
+    //private:
     int dfs(int curr){
         int nodes = 1;
         visited[curr] = true;
-        cout << "node " << curr << " visited" << endl;
+        //cout << "node " << curr << " visited" << endl;
+        cout << curr+1 << ' ';
         for(int next: adj[curr]){
             if(!visited[next]) nodes += dfs(next);
         }
@@ -94,24 +96,19 @@ class Graph{
 
 int main() {
 
-    Graph g(6);
-    g.addEdge(0,1);
-    g.addEdge(0,2);
-    g.addEdge(1,5);
-    g.addEdge(2,5);
-    g.addEdge(3,4);
+    int n,m,v; cin>>n>>m>>v;
+
+    Graph g(n);
+
+    for(int i=0;i<m;i++){
+        int l, r; cin>>l>>r;
+        g.addEdge(l-1,r-1);
+    }
     g.sortList();
-    g.dfs();
-
-    int components = g.dfsAll();
-    cout<<"components : "<<components<<endl<<endl;
-
-    cout<<"bfs Start"<<endl;
-    g.bfs();
-
-    pair<int,int> p=make_pair(1,2);
-    cout<<"first element : "<<p.first<<endl;
-    cout<<"second element : "<<p.second<<endl;
+    
+    g.dfs(v-1);
+    cout<<endl;
+    g.bfs(v-1);
 
 	return 0;
 }
