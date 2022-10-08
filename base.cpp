@@ -5,10 +5,12 @@
 #include <vector>
 #include <queue>
 #include <set>
+#include <numeric>
 #define ll long long
 using namespace std;
 
 // link : 
+// category : 
 
 int main() {
 	

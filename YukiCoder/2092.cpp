@@ -8,7 +8,8 @@
 #define ll long long
 using namespace std;
 
-// link : 
+// link : https://yukicoder.me/problems/no/2092
+// O(n) not O(n^2) backward summation
 
 int main() {
 	
