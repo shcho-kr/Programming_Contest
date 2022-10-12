@@ -9,6 +9,7 @@
 using namespace std;
 
 // link : https://www.acmicpc.net/problem/2512
+// binary search
 
 int main() {
 	

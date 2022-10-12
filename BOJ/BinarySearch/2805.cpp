@@ -9,6 +9,7 @@
 using namespace std;
 
 // link : https://www.acmicpc.net/problem/2805
+// binary search
 
 ll cutting(int n, int* tree, int height){
     ll sum=0;
