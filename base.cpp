@@ -8,6 +8,7 @@
 #include <numeric>
 #include <cmath>
 #define ll long long
+#define endl "\n"
 using namespace std;
 
 // link : 
