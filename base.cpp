@@ -18,6 +18,9 @@ using namespace std;
 
 int main() {
     ios_base::sync_with_stdio(false);
+    // cout.width();
+    // cout.fill('0');
+    // cout.precision(3);
 	
     cout<<"Hello world!"<<endl;
 
