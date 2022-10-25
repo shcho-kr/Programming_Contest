@@ -8,16 +8,13 @@
 #include <numeric>
 #include <cmath>
 #define ll long long
-#define endl "\n"
+#define endl '\n'
 using namespace std;
-
-
-
-// link : 
 // category : 
 
 int main() {
     ios_base::sync_with_stdio(false);
+    
     // cout.width();
     // cout.fill('0');
     // cout.precision(3);
