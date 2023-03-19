@@ -113,5 +113,32 @@ int main() {
     cout<<"first element : "<<p.first<<endl;
     cout<<"second element : "<<p.second<<endl;
 
+    /*
+    // 四方向への移動ベクトル
+    const int dx[4] = {1, 0, -1, 0};
+    const int dy[4] = {0, 1, 0, -1};
+
+
+    void dfs(int h, int w) {
+        seen[h][w] = true;
+
+        // 四方向を探索
+        for (int dir = 0; dir < 4; ++dir) {
+            int nh = h + dx[dir];
+            int nw = w + dy[dir];
+
+            // 場外アウトしたり、移動先が壁の場合はスルー
+            if (nh < 0 || nh >= H || nw < 0 || nw >= W) continue;
+            if (field[nh][nw] == '#') continue;
+
+            // 移動先が探索済みの場合
+            if (seen[nh][nw]) continue;
+
+            // 再帰的に探索
+            dfs(nh, nw);
+        }
+    }
+    */
+
 	return 0;
 }

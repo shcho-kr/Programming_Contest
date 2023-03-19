@@ -82,10 +82,17 @@ int main() {
     sort(v2.begin(), v2.end(), [](int i, int j) { return j > i; });
     cout << "sorted vector with lamda(operator) : ";
     for (int i : v2) cout << i << ' ';
+    cout << endl;
+
+    vector<bool> seen;
+    seen.assign(5, false);
+    cout << "seen vector assigning : ";
+    for (bool b : seen) cout << b << ' ';
     cout << endl << endl;
 
     // 2D vector
-    vector<vector<int>> graph(5, vector<int>());
+    vector<vector<int>> graph(5);
+    // vector<vector<int>> graph(5, vector<int>()); // it is same
     vector<int> v;
     graph.push_back(v);
     graph[0].push_back(3);
@@ -133,6 +140,10 @@ int main() {
     cout << endl;
     cout << "lower bound(2) and upper bound(99) : " << *s.lower_bound(2) << ", " << *s.upper_bound(99) << endl;
     cout << endl;
+
+    cout << "set erase(3) : ";
+    s.erase(3);
+    for (int i : s) cout << i << ' ';
 
     // map : key, valuer, no same key, ordered by key
     map<string, int> m;
