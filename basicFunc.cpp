@@ -187,6 +187,22 @@ int main() {
     cout << endl << "1 more prev permutation : " << endl;
     prev_permutation(list4, list4 + 3);
     for (int i : list4) cout << i << ' ';
+    cout << endl << endl;
+
+    // binary search
+    cout << "binary search/lower bound/upper bound with v2 about 3 : " << endl;
+    cout << "v2 : ";
+    for (int i : v2) cout << i << ' ';
+    cout << endl;
+    cout << binary_search(v2.begin(), v2.end(), 3) << ' ';
+    cout << lower_bound(v2.begin(), v2.end(), 3) - v2.begin() << ' ';
+    cout << upper_bound(v2.begin(), v2.end(), 3) - v2.begin() << endl;
+    cout << endl;
+
+    // gcd lcm
+    int a = 44, b = 77;
+    cout << "gcd of 44 and 77 : " << gcd(a, b) << endl;
+    cout << "lcm of 44 and 77 : " << lcm(a, b) << endl;
     cout << endl;
 
     return 0;
