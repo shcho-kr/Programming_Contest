@@ -33,6 +33,7 @@ int main() {
     }
     int list2[10];
     fill_n(list2, 10, 3);
+    // fill(list2, list2 + 10, 3);
     cout << "fill list with 3 : ";
     for (int i : list2) cout << i << ' ';
     cout << endl << endl;
